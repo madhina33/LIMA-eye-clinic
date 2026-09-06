@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eye Diseases & Care | LIMA Eye Clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #f8f9fa; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        .navbar { background-color: #0d6efd; }
+        .disease-card { border: none; border-radius: 15px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); transition: 0.3s; }
+        .disease-card:hover { transform: translateY(-5px); }
+        .card-img-top { height: 200px; object-fit: cover; border-top-left-radius: 15px; border-top-right-radius: 15px; }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/"><i class="fas fa-eye me-2"></i>LIMA Eye Clinic</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link active" href="/diseases">Disease Info</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <section class="container my-5 text-center">
+        <h1 class="fw-bold text-primary mb-3">Retinal Diseases & Care Guide</h1>
+        <p class="text-muted lead">Learn about various stages of Diabetic Retinopathy, symptoms, early warnings, and preventive measures.</p>
+    </section>
+
+    <!-- Diseases Cards Section -->
+    <div class="container mb-5">
+        <div class="row g-4">
+            
+            <!-- Mild DR -->
+            <div class="col-md-6">
+                <div class="card disease-card h-100">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Mild DR">
+                    <div class="card-body p-4">
+                        <span class="badge bg-warning text-dark mb-2">Stage 1: Mild Non-Proliferative</span>
+                        <h3 class="card-title fw-bold">Mild Diabetic Retinopathy</h3>
+                        <p class="text-muted">Microaneurysms start to form, representing small areas of ballooning in the retina's tiny blood vessels.</p>
+                        <h6 class="fw-bold text-dark mt-3"><i class="fas fa-exclamation-circle text-warning me-2"></i>Symptoms:</h6>
+                        <p class="small text-muted">Usually asymptomatic in early stages. Vision remains mostly normal.</p>
+                        <h6 class="fw-bold text-dark mt-2"><i class="fas fa-shield-alt text-success me-2"></i>Precautions:</h6>
+                        <p class="small text-muted mb-0">Strict blood sugar level control, routine annual eye examinations.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Moderate DR -->
+            <div class="col-md-6">
+                <div class="card disease-card h-100">
+                    <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Moderate DR">
+                    <div class="card-body p-4">
+                        <span class="badge bg-info text-dark mb-2">Stage 2: Moderate</span>
+                        <h3 class="card-title fw-bold">Moderate Diabetic Retinopathy</h3>
+                        <p class="text-muted">As the disease progresses, blood vessels that nourish the retina may swell and begin to block blood flow.</p>
+                        <h6 class="fw-bold text-dark mt-3"><i class="fas fa-exclamation-circle text-warning me-2"></i>Symptoms:</h6>
+                        <p class="small text-muted">Occasional blurred vision or minor difficulty reading.</p>
+                        <h6 class="fw-bold text-dark mt-2"><i class="fas fa-shield-alt text-success me-2"></i>Precautions:</h6>
+                        <p class="small text-muted mb-0">Manage blood pressure, cholesterol levels, and consult an ophthalmologist every 6 months.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Severe DR -->
+            <div class="col-md-6">
+                <div class="card disease-card h-100">
+                    <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Severe DR">
+                    <div class="card-body p-4">
+                        <span class="badge bg-orange text-white bg-danger mb-2">Stage 3: Severe</span>
+                        <h3 class="card-title fw-bold">Severe Diabetic Retinopathy</h3>
+                        <p class="text-muted">A significant number of blood vessels are blocked, depriving the retina of blood supply, triggering growth signals for new vessels.</p>
+                        <h6 class="fw-bold text-dark mt-3"><i class="fas fa-exclamation-circle text-warning me-2"></i>Symptoms:</h6>
+                        <p class="small text-muted">Noticeable dark spots, floating spots (floaters), or fluctuating vision.</p>
+                        <h6 class="fw-bold text-dark mt-2"><i class="fas fa-shield-alt text-success me-2"></i>Precautions:</h6>
+                        <p class="small text-muted mb-0">Immediate medical intervention, laser treatment evaluation, urgent dietary modifications.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Proliferative DR -->
+            <div class="col-md-6">
+                <div class="card disease-card h-100">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80" class="card-img-top" alt="Proliferative DR">
+                    <div class="card-body p-4">
+                        <span class="badge bg-danger mb-2">Stage 4: Proliferative (Advanced)</span>
+                        <h3 class="card-title fw-bold">Proliferative Diabetic Retinopathy</h3>
+                        <p class="text-muted">Advanced stage where fragile new blood vessels grow along the retina and inside the vitreous gel, leading to severe bleeding risks.</p>
+                        <h6 class="fw-bold text-dark mt-3"><i class="fas fa-exclamation-circle text-warning me-2"></i>Symptoms:</h6>
+                        <p class="small text-muted">Severe vision loss, sudden blurred vision, cobwebs in vision field, or complete dark spots.</p>
+                        <h6 class="fw-bold text-dark mt-2"><i class="fas fa-shield-alt text-success me-2"></i>Precautions:</h6>
+                        <p class="small text-muted mb-0">Immediate surgical procedures (vitrectomy), strict glycemic control, frequent clinical supervision.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4">
+        <div class="container">
+            <p class="mb-0 fw-bold">&copy; 2026 LIMA Eye Clinic & Diagnostics. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
