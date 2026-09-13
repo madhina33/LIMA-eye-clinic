@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retinal Scan Result - LIMA Eye Clinic</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-info" href="/"><i class="fas fa-eye me-2"></i>LIMA Eye Clinic</a>
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link" href="/">Home</a>
+                <a class="nav-link" href="/predict">Disease Prediction</a>
+                <a class="nav-link active text-white fw-semibold" href="/upload">Image Upload</a>
+                <a class="nav-link" href="/about">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="card shadow-lg border-0 rounded-4 p-4 bg-white">
+                    
+                    <h2 class="fw-bold text-dark mb-4 text-center border-bottom pb-3">
+                        <i class="fas fa-file-medical text-primary me-2"></i>Retinal Screening Report
+                    </h2>
+
+                    <!-- Top Section: Image & Diagnosis Classification -->
+                    <div class="row align-items-center mb-4 p-4 bg-light rounded-4 border shadow-sm">
+                        <div class="col-md-4 text-center mb-3 mb-md-0">
+                            {% if image_path %}
+                                <img src="{{ url_for('static', filename='uploads/' + image_path.split('/')[-1]) }}" class="img-fluid rounded-3 shadow-sm border" alt="Retinal Scan" style="max-height: 180px; object-fit: cover;">
+                            {% else %}
+                                <div class="p-4 border bg-white rounded-3 text-muted shadow-sm"><i class="fas fa-image fa-2x mb-2 text-primary"></i><br><strong>Retinal Scan</strong></div>
+                            {% endif %}
+                        </div>
+                        <div class="col-md-8">
+                            <h6 class="text-uppercase fw-bold text-secondary mb-1">Diagnosis Classification:</h6>
+                            <h3 class="text-danger fw-bold mb-2">{{ prediction }}</h3>
+                            <span class="badge bg-danger fs-6 px-3 py-2 mb-2 shadow-sm"><i class="fas fa-exclamation-triangle me-1"></i>{{ info.status }}</span>
+                            <p class="text-dark fw-bold mt-2 mb-0" style="font-size: 1.05rem;">{{ info.description }}</p>
+                        </div>
+                    </div>
+
+                    <!-- Middle Section: Treatment & Doctor Consultation -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-primary bg-opacity-10 p-4 h-100 rounded-4 shadow-sm">
+                                <h5 class="text-primary fw-bold mb-2"><i class="fas fa-pills me-2"></i>Recommended Treatment</h5>
+                                <p class="text-dark fw-bold mb-0" style="font-size: 1rem;">{{ info.treatment }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card border-0 bg-warning bg-opacity-15 p-4 h-100 rounded-4 shadow-sm">
+                                <h5 class="text-dark fw-bold mb-2"><i class="fas fa-clock me-2 text-warning"></i>Doctor Consultation</h5>
+                                <p class="text-dark fw-bold mb-0" style="font-size: 1rem;">{{ info.consultation }}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Section: Clinical Precautions & Actions -->
+                    <div class="card border-0 bg-success bg-opacity-10 p-4 rounded-4 shadow-sm">
+                        <h4 class="text-success fw-bold mb-3"><i class="fas fa-notes-medical me-2"></i>Clinical Precautions & Actions</h4>
+                        <ul class="list-group list-group-flush bg-transparent">
+                            {% for precaution in info.precautions %}
+                            <li class="list-group-item bg-transparent border-success border-opacity-25 py-2">
+                                <i class="fas fa-check-circle text-success me-2"></i><strong class="text-dark" style="font-size: 1.02rem;">{{ precaution }}</strong>
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <!-- Back Button -->
+                    <div class="text-center mt-4">
+                        <a href="/upload" class="btn btn-dark px-5 py-2 fw-bold rounded-pill shadow-sm"><i class="fas fa-arrow-left me-2"></i>Upload Another Scan</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction - LIMA Eye Clinic</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { background-color: #f4f9fd; color: #333; }
+        .navbar { background-color: #0d6efd; }
+        .navbar-brand, .nav-link { color: #ffffff !important; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="/"><i class="fas fa-eye me-2"></i>LIMA Eye Clinic</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/predict">Disease Prediction</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/upload">Image Upload</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="card shadow border-0 p-4 text-center">
+            <h2 class="text-primary mb-3"><i class="fas fa-stethoscope me-2"></i>Retinal Disease Prediction Hub</h2>
+            <p class="text-muted">Learn about the diagnostic categories and predictive analytics integrated into LIMA Eye Clinic.</p>
+            <hr>
+            <div class="row text-start mt-3">
+                <div class="col-md-6 mb-3">
+                    <div class="p-3 border rounded bg-white shadow-sm">
+                        <h5><i class="fas fa-shield-alt text-primary me-2"></i>Early Detection</h5>
+                        <p class="small text-muted mb-0">Our automated pipeline analyzes retinal fundus images to assist clinicians in spotting early signs of eye abnormalities.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <div class="p-3 border rounded bg-white shadow-sm">
+                        <h5><i class="fas fa-microscope text-primary me-2"></i>Deep Learning Model</h5>
+                        <p class="small text-muted mb-0">Trained on robust feature extraction techniques to ensure high reliability and fast classification performance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
